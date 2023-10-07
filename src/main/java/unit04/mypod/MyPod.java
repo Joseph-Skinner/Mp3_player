@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
@@ -34,8 +35,11 @@ public class MyPod extends Application {
         VBox vbox = new VBox();
         GridPane gridPane = new GridPane();
         BorderPane pane = new BorderPane();
-    
+        TextField textField = new TextField();
 
+
+        textField.setText("Click on a song to play, click again to pause");
+    
         Button[] songButtons = new Button[6];
         songButtons[0] = makeSongButton(twistedLove,pane);
         songButtons[1] = makeSongButton(pools,pane);
@@ -56,6 +60,7 @@ public class MyPod extends Application {
 
         gridPane.add(vbox, 2, 1);
         gridPane.add(pane,1,1);
+        gridPane.add(textField, 2,2);
         
         
 
